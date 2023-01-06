@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;500&display=swap" rel="stylesheet">
+    <title>Meine Notizen</title>
+    <link rel="icon" type="image/icon type" href="img/notepad-48.png">
+
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+</head>
+
+<body onload="showNote()">
+    <main>
+        <h1>Meine Notizen</h1>
+        <div class="input-container">
+            <input id="inputTitle" type="text" class="title" onkeydown="enterDown()" placeholder="Title">
+            <input id="inputText" type="text" class="text" onkeydown="enterDown()" placeholder=" Text">
+           <div class="input-sub-container">
+            <img title="Notiz speichern" src="img/save-48.png" style="height:23px ; width:23px ;" onclick="checkAllInput()">
+            <img title="Papierkorb" onclick="openTrash()" src="img/delete-48 (1).png" alt="">
+           </div>
+        </div>
+        <div id="note-container" class="note-container"></div>
+       
+
+    </main>
+
+    <div id="trash-container" class="trash-container d-none">
+
+      
+        <h1>Papierkorb</h1>
+        <div class="trashContainerIcons">
+            <img class="closeImg" onclick="closeTrash()" title="Zurück" src="img/arrow-105-48.png" alt="">
+            <img class="deleteTrashImg" onclick="deleteTrashNote()" title="Papierkorb entleeren" src="img/delete-48.png" alt="">
+           </div>
+        <div id="trashForNote" class="trashForNote">
+            
+            
+           
+
+
+
+        </div>
+
+    </div>
+
+</body>
+
+</html>
